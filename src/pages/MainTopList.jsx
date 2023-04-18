@@ -9,7 +9,9 @@ function MainTopList({ data }) {
     <>
       <section className="MainTopList mw">
         <h2>Shop The Latest</h2>
-        <Link to="/">View All</Link>
+        <Link to="/" className="btnAll">
+          View All
+        </Link>
         <ul className="listCon">
           {dataList.map((item) => (
             <li className="list" key={item._id}>

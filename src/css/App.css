@@ -88,6 +88,19 @@
   transform: translateY(-50%);
   left: var(--gap-s);
 }
+.mainEvent .eventList .eventInfo p {
+  font-size: 3rem;
+  padding: var(--gap-s) 0;
+}
+.mainEvent .eventList .eventInfo button {
+  font-size: 1.5rem;
+  border: 1px solid burlywood;
+  color: burlywood;
+  outline: none;
+  background-color: transparent;
+  padding: 0.5rem var(--gap-s);
+  border-radius: 0.5rem;
+}
 
 /* MainTopList 메인 top 상품 리스트 */
 .MainTopList {
@@ -100,6 +113,18 @@
   padding: var(--gap-s) 0;
   font-size: 1.5rem;
   font-weight: bold;
+}
+.MainTopList .btnAll {
+  border: 1px solid burlywood;
+  color: burlywood;
+  outline: none;
+  background-color: transparent;
+  padding: 0 var(--gap-s);
+  border-radius: 0.25rem;
+}
+.MainTopList .btnAll:hover {
+  color: #fff;
+  background-color: burlywood;
 }
 .MainTopList .listCon {
   width: 100%;
@@ -190,6 +215,16 @@
   color: #fff;
   font-size: 0.8rem;
   font-weight: bold;
+}
+.ProductCard .cardText {
+  margin-top: 1rem;
+}
+.ProductCard .cardText p {
+  padding: 0.5rem 0;
+  font-weight: bold;
+}
+.ProductCard .cardText p:last-of-type {
+  color: burlywood;
 }
 .ProductCard .btnAdd {
   position: absolute;

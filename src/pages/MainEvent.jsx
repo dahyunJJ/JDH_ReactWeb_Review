@@ -17,8 +17,8 @@ function MainEvent() {
               alt="event_01"
             />
             <div className="eventInfo">
-              <p>상품이름</p>
-              <button>구매하기</button>
+              <p>Gold big hoops</p>
+              <button>$ 68.00</button>
             </div>
           </div>
         </SwiperSlide>
@@ -29,8 +29,8 @@ function MainEvent() {
               alt="event_02"
             />
             <div className="eventInfo">
-              <p>상품이름</p>
-              <button>구매하기</button>
+              <p>Gold big hoops</p>
+              <button>$ 68.00</button>
             </div>
           </div>
         </SwiperSlide>
@@ -41,8 +41,8 @@ function MainEvent() {
               alt="event_03"
             />
             <div className="eventInfo">
-              <p>상품이름</p>
-              <button>구매하기</button>
+              <p>Gold big hoops</p>
+              <button>$ 68.00</button>
             </div>
           </div>
         </SwiperSlide>

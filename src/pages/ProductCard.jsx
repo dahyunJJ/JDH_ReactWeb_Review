@@ -13,7 +13,7 @@ function ProductCard({ data }) {
           <span className="discount">{data.discount}%</span>
         )}
       </div>
-      <div>
+      <div className="cardText">
         <p>{data.title}</p>
         <p>{data.price}</p>
       </div>

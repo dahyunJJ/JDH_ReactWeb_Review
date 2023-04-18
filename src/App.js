@@ -23,7 +23,7 @@ function App() {
         <Route path="/Detail/:id" element={<Detail data={data} />} />
         <Route path="/Blog" element={<div>Blog</div>} />
         <Route path="/Story" element={<div>Our Story</div>} />
-        <Route path="*" element={<div>404 not found</div>} />
+        <Route path="*" element={<Main data={data} />} />
       </Routes>
       <Footer />
     </div>
