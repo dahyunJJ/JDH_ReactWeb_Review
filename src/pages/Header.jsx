@@ -33,7 +33,7 @@ function Header({ subName }) {
           <Link to="/">
             <i className="fa-solid fa-magnifying-glass"></i>
           </Link>
-          <Link to="/">
+          <Link to="/Cart">
             <i className="fa-solid fa-cart-shopping"></i>
           </Link>
           <Link to="/">

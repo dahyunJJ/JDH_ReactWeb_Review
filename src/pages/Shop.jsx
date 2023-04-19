@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 import ProductCard from "./ProductCard";
 
-function Shop({ data }) {
+function Shop() {
+  let data = useSelector((state) => state.data);
+
   let [dataList, setDataList] = useState(data);
 
   return (

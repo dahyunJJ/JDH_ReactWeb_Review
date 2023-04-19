@@ -1,12 +1,12 @@
 import MainEvent from "./MainEvent";
 import MainTopList from "./MainTopList";
 
-function Main({ data }) {
+function Main() {
   return (
     <>
       <section className="mw">
         <MainEvent />
-        <MainTopList data={data} />
+        <MainTopList />
       </section>
     </>
   );

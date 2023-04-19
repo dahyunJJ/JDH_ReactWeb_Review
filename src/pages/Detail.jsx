@@ -1,12 +1,15 @@
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import TabUI from "./TabUI";
 import Similar from "./Similar";
 import Count from "./Count";
 
-function Detail({ data }) {
-  // let id = useParams(); 오브젝트 형태로 쓰겠다는 의미
+function Detail() {
+  let data = useSelector((state) => state.data);
+
   let { id } = useParams(); // 가지고 있는 value값을 출력
+  // let id = useParams(); 오브젝트 형태로 쓰겠다는 의미
   id = id - 1;
 
   let dataList = data.filter((a) => a.category === data[id].category);

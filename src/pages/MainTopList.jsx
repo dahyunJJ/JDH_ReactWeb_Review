@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import ProductCard from "./ProductCard";
 
-function MainTopList({ data }) {
+function MainTopList() {
+  let data = useSelector((state) => state.data);
   // console.log(data);
   let dataList = data.filter((item) => item.category === "top");
   return (

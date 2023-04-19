@@ -249,3 +249,61 @@
 .detailCon .info {
   width: calc(55% - var(--gap-s));
 }
+
+/* Cart 영역 */
+.cart {
+  border: 1px solid #eee;
+}
+.cart h1 {
+  padding: var(--gap-s) 0;
+}
+.cart h1 span {
+  font-weight: bold;
+}
+.cart .cartTable {
+  border: 1px solid red;
+  width: 100%;
+  /* border-collapse: collapse; */
+}
+table,
+tr,
+td,
+th {
+  border: 1px solid #333;
+}
+th {
+  background-color: #eee;
+  text-align: center;
+  padding: 0.25rem 0;
+  width: 100px;
+}
+th:first-of-type {
+  width: calc(100% - 400px);
+}
+tr:nth-of-type(even) {
+  background-color: #eeeeee50;
+}
+tr:hover {
+  background-color: #eeeeee;
+}
+td {
+  /* table, td는 display 속성이 적용되지 않음 */
+  vertical-align: middle;
+  padding: 0.5rem;
+}
+.cart img {
+  width: 50px;
+}
+.cart .cartImg > div {
+  display: flex;
+  align-items: center;
+}
+
+.cartPrice,
+.cartTotal {
+  text-align: right;
+}
+.cartCount,
+.cartBtn {
+  text-align: center;
+}
