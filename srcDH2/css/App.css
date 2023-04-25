@@ -1,0 +1,408 @@
+@charset "utf-8";
+:root {
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  color: #232323;
+}
+.mw {
+  max-width: 1200px;
+  width: calc(100% - 2rem);
+  margin: 4rem auto;
+}
+img {
+  width: 100%;
+}
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.btn {
+  border: 2px solid #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #ddd;
+}
+/* HEADER */
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.Header.bar {
+  border-bottom: 1px solid lightgray;
+}
+
+.Header .logo {
+  width: 120px;
+}
+
+.Header > div {
+  display: flex;
+}
+.Header .gnb {
+  display: flex;
+}
+.Header .gnb a {
+  padding: 0 2rem;
+}
+.Header .gnb a.on {
+  background-color: #ddd;
+}
+.Header .icon {
+  border-left: 1px solid #ddd;
+  display: flex;
+}
+
+.Header .icon a {
+  padding: 0 0.5rem;
+}
+
+/* main */
+.MainBanner .imgCon {
+  padding-top: 40%;
+  background-position: botton center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.MainBanner .imgCon > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.MainBanner .imgCon .imgText {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  padding: 0 2rem;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.MainBanner .imgCon h2 {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+.MainBanner .imgCon p {
+  width: 100%;
+  padding: 0.5rem 0;
+}
+.MainBanner .swiper-pagination-bullet {
+  background-color: transparent;
+  background-color: #fff;
+}
+.MainBanner .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  transform: scale(1.5);
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.listCon {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list {
+  width: calc(100% / 3 - 0.5rem);
+  margin-right: 0.75rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.list:nth-of-type(3n) {
+  margin-right: 0;
+}
+.list .imgCon {
+  padding-top: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.list .imgCon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.imgLabel {
+  position: absolute;
+  z-index: 1;
+  bottom: -60px;
+  text-align: center;
+  left: 0;
+  width: 100%;
+  background-color: #ddd;
+  transition: 0.3s;
+}
+.discount {
+  color: #fff;
+  background-color: goldenrod;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 25px;
+}
+.list p {
+  padding: 1rem 0;
+}
+.list p:first-of-type {
+  font-weight: bold;
+}
+
+.detailBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.list:hover .imgLabel {
+  bottom: 0;
+}
+.MainList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.MainList h1 {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.MainList > .btn {
+  border: 1px solid goldenrod;
+  color: goldenrod;
+}
+.MainList > .btn:hover {
+  background-color: goldenrod;
+  color: #fff;
+}
+.MainList .listCon {
+  padding: 0.5rem 0;
+}
+.MainList .discount {
+  display: none;
+}
+/* Shop */
+.Shop {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.Shop h1 {
+  width: 100%;
+  padding: 2rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.Shop .ShopBtnWrap {
+  width: 18%;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.Shop .ShopBtnWrap .btn {
+  width: 100%;
+  border-radius: 0rem;
+  margin-top: 0;
+  border: 1px solid goldenrod;
+  color: goldenrod;
+  margin-bottom: 0.5rem;
+}
+.Shop .ShopBtnWrap .btn:hover {
+  background-color: goldenrod;
+  color: #fff;
+}
+.Shop .AllList {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.Shop .listCon {
+  width: 80%;
+}
+/* Detail */
+.Detail {
+  padding-top: 2rem;
+}
+.DetailCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.DetailCon .imgCon {
+  width: 40%;
+}
+.DetailCon .DetailText {
+  width: 58%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+}
+.DetailCon .DetailText h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 0 1.25rem;
+  width: 100%;
+}
+.DetailCon .DetailText p {
+  width: 100%;
+  color: goldenrod;
+  font-weight: 600;
+}
+.DetailCon .cartWrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+.DetailCon .countBtn {
+  min-width: 100px;
+  width: 15%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5rem 0;
+  background-color: #eaeaea;
+  margin-right: 2rem;
+}
+.DetailCon .countBtn .plus,
+.DetailCon .countBtn .minus {
+  cursor: pointer;
+}
+.DetailCon .cartBtn {
+  width: 50%;
+  border: 2px solid goldenrod;
+  color: goldenrod;
+  text-align: center;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.DetailCon .cartBtn:hover {
+  color: #fff;
+  background-color: goldenrod;
+}
+.Detail .listCon {
+  align-items: center;
+  width: 100%;
+}
+
+.Detail .slide .list {
+  width: 100%;
+  border: 2px solid darkgoldenrod;
+  margin-right: 0;
+  margin-bottom: 0m;
+}
+/* footer */
+.footer {
+  color: #5a5656;
+  padding-top: 2rem;
+  border-top: 0.5px solid #dddd;
+}
+.footer .top {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .top nav {
+  width: 70%;
+  display: flex;
+}
+.footer .top nav a {
+  padding: 0 2rem;
+}
+.footer .top > div {
+  display: flex;
+  padding: 0 0 0.5rem;
+  border-bottom: 0.5px solid #ddd;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+.footer .top > div > * {
+  padding: 0 0.5rem;
+}
+.footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+}
+.footer .bottom .icon {
+  display: flex;
+}
+.footer .bottom .icon a {
+  padding: 0 0.5rem;
+}
+
+/* Cart Section */
+.cart {
+  /* border: 1px solid red; */
+}
+.cartTable {
+  /* border: 1px solid blue; */
+  width: 100%;
+}
+.cartTable th,
+.cartTable td {
+  border: 1px solid #444;
+  padding: 0.5rem;
+  vertical-align: middle;
+  position: relative;
+}
+.cartTable th {
+  background-color: #eee;
+  text-align: center;
+}
+.cartTable .right {
+  text-align: right;
+}
+.cartTable .center {
+  text-align: center;
+}
+.cartTable img {
+  width: 50px;
+}
+
+/* Watch - 최근 본 상품 영역 */
+.watch {
+  position: fixed;
+  width: 100px;
+  right: 2rem;
+  top: 150px;
+  border: 1px solid coral;
+  z-index: 10;
+}
+.watch .list {
+  background-color: #ddd;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+.watch .list li {
+  text-align: center;
+}
+.watch img {
+  width: 50px;
+}

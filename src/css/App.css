@@ -1,309 +1,409 @@
 @charset "utf-8";
-
 :root {
-  --mw: 1400px;
-  --gap-s: 1rem;
-  --gap-b: 4rem;
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  color: #232323;
 }
-
 .mw {
-  /* border: 1px solid red; */
-  max-width: var(--mw);
-  width: calc(100% - var(--gap-s));
-  margin: var(--gap-b) auto;
+  max-width: 1200px;
+  width: calc(100% - 2rem);
+  margin: 4rem auto;
 }
-.hd {
-  margin-top: 0;
-  display: flex;
-  align-items: center;
-}
-.hd.bar {
-  border-bottom: 1px solid #eee;
-}
-.hd h1 {
-  width: 150px;
-}
-.hd h1 img {
+img {
   width: 100%;
 }
-.hd .gnb {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: var(--gap-s);
-  position: relative;
-}
-.hd .gnb::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 30%;
-  background-color: #888;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.hd .gnb a {
-  padding: var(--gap-s);
-  transition: 0.3s;
-}
-.hd .gnb a:hover {
-  background-color: #eee;
-}
-.hd .gnb a.on {
-  background-color: tomato;
-}
-.hd .person {
-  color: #999;
-  padding-left: var(--gap-s);
-}
-.hd .person a {
-  display: inline-block;
-  padding: var(--gap-s);
-}
-.hd .person a:hover {
-  color: #000;
-}
-
-/* 메인 이벤트 배너 영역 */
-.mainEvent .eventList {
-  padding-top: 30%;
-  position: relative;
-  border-radius: var(--gap-s);
-  overflow: hidden;
-}
-.mainEvent .eventList > * {
-  position: absolute;
-}
-.mainEvent .eventList img {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.mainEvent .eventList .eventInfo {
-  top: 50%;
-  transform: translateY(-50%);
-  left: var(--gap-s);
-}
-.mainEvent .eventList .eventInfo p {
-  font-size: 3rem;
-  padding: var(--gap-s) 0;
-}
-.mainEvent .eventList .eventInfo button {
-  font-size: 1.5rem;
-  border: 1px solid burlywood;
-  color: burlywood;
+button {
+  border: none;
   outline: none;
   background-color: transparent;
-  padding: 0.5rem var(--gap-s);
+}
+.btn {
+  border: 2px solid #fff;
+  padding: 0.5rem 2rem;
   border-radius: 0.5rem;
-}
-
-/* MainTopList 메인 top 상품 리스트 */
-.MainTopList {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-.MainTopList h2 {
-  padding: var(--gap-s) 0;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.MainTopList .btnAll {
-  border: 1px solid burlywood;
-  color: burlywood;
-  outline: none;
-  background-color: transparent;
-  padding: 0 var(--gap-s);
-  border-radius: 0.25rem;
-}
-.MainTopList .btnAll:hover {
-  color: #fff;
-  background-color: burlywood;
-}
-.MainTopList .listCon {
-  width: 100%;
-  /* border: 1px solid #eee; */
-  display: flex;
-  flex-wrap: wrap;
-}
-.MainTopList .listCon li {
-  width: calc(100% / 3 - var(--gap-s));
-  margin-right: calc(var(--gap-s) + var(--gap-s) / 2);
-  margin-bottom: var(--gap-s);
-  position: relative;
-  /* border: 1px solid blue; */
-}
-.MainTopList .listCon li:nth-of-type(3n) {
-  margin-right: 0;
-}
-/* Shop 영역 */
-.Shop {
-  display: flex;
-  flex-wrap: wrap;
-}
-.Shop h2 {
-  width: 100%;
-  padding: var(--gap-s) 0;
-}
-.Shop .btnCon {
-  width: 200px;
-  padding-right: var(--gap-s);
-}
-.Shop .btnCon .btn {
-  width: 100%;
-  margin-bottom: 0.5rem;
-  padding: var(--gap-s);
+  margin-top: 1rem;
   cursor: pointer;
 }
-.Shop .listCon {
-  width: calc(100% - 200px);
+.btn:hover {
+  background-color: #fff;
+  color: #ddd;
+}
+/* HEADER */
+
+.Header {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
 }
-.Shop .listCon li {
-  width: calc(100% / 4 - var(--gap-s));
-  margin-right: calc(var(--gap-s) + var(--gap-s) / 3);
-  margin-bottom: var(--gap-s);
-  position: relative;
-}
-.Shop .listCon li:nth-of-type(4n) {
-  margin-right: 0;
+.Header.bar {
+  border-bottom: 1px solid lightgray;
 }
 
-/* 카드 컴포넌트 */
-.ProductCard .cardImg {
-  /* border: 1px solid red; */
-  overflow: hidden;
+.Header .logo {
+  width: 120px;
+}
+
+.Header > div {
+  display: flex;
+}
+.Header .gnb {
+  display: flex;
+}
+.Header .gnb a {
+  padding: 0 2rem;
+}
+.Header .gnb a.on {
+  background-color: #ddd;
+}
+.Header .icon {
+  border-left: 1px solid #ddd;
+  display: flex;
+}
+
+.Header .icon a {
+  padding: 0 0.5rem;
+}
+
+/* main */
+.MainBanner .imgCon {
+  padding-top: 40%;
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
-  padding-top: 100%;
-  border-radius: var(--gap-s);
 }
-.ProductCard .cardImg * {
+.MainBanner .imgCon > img {
   position: absolute;
-}
-.ProductCard .cardImg img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -1;
 }
-.ProductCard .cardImg .addCart {
-  text-transform: uppercase;
-  background-color: rgba(255, 255, 255, 0.8);
-  bottom: -100%;
+
+.MainBanner .imgCon .imgText {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  padding: 0 2rem;
+  color: #fff;
   width: 100%;
-  padding: var(--gap-s);
+  display: flex;
+  flex-wrap: wrap;
+}
+.MainBanner .imgCon h2 {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+.MainBanner .imgCon p {
+  width: 100%;
+  padding: 0.5rem 0;
+}
+.MainBanner .swiper-pagination-bullet {
+  background-color: transparent;
+  background-color: #fff;
+}
+.MainBanner .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  transform: scale(1.5);
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.listCon {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list {
+  width: calc(100% / 3 - 0.5rem);
+  margin-right: 0.75rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.list:nth-of-type(3n) {
+  margin-right: 0;
+}
+.list .imgCon {
+  padding-top: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.list .imgCon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.imgLabel {
+  position: absolute;
+  z-index: 1;
+  bottom: -60px;
   text-align: center;
+  left: 0;
+  width: 100%;
+  background-color: #ddd;
   transition: 0.3s;
 }
-.ProductCard:hover .addCart {
-  bottom: 0;
-}
-.ProductCard .cardImg .discount {
+.discount {
+  color: #fff;
+  background-color: goldenrod;
+  position: absolute;
   top: 0;
   left: 0;
-  padding: 0.5rem;
-  background-color: tomato;
-  color: #fff;
-  font-size: 0.8rem;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 25px;
+}
+.list p {
+  padding: 1rem 0;
+}
+.list p:first-of-type {
   font-weight: bold;
 }
-.ProductCard .cardText {
-  margin-top: 1rem;
-}
-.ProductCard .cardText p {
-  padding: 0.5rem 0;
-  font-weight: bold;
-}
-.ProductCard .cardText p:last-of-type {
-  color: burlywood;
-}
-.ProductCard .btnAdd {
+
+.detailBtn {
   position: absolute;
-  color: transparent;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
+}
+.list:hover .imgLabel {
+  bottom: 0;
+}
+.MainList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.MainList h1 {
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
-/* Detail 영역 */
-.detailCon {
+.MainList > .btn {
+  border: 1px solid goldenrod;
+  color: goldenrod;
+}
+.MainList > .btn:hover {
+  background-color: goldenrod;
+  color: #fff;
+}
+.MainList .listCon {
+  padding: 0.5rem 0;
+}
+.MainList .discount {
+  display: none;
+}
+/* Shop */
+.Shop {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.Shop h1 {
+  width: 100%;
+  padding: 2rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.Shop .ShopBtnWrap {
+  width: 18%;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.Shop .ShopBtnWrap .btn {
+  width: 100%;
+  border-radius: 0rem;
+  margin-top: 0;
+  border: 1px solid goldenrod;
+  color: goldenrod;
+  margin-bottom: 0.5rem;
+}
+.Shop .ShopBtnWrap .btn:hover {
+  background-color: goldenrod;
+  color: #fff;
+}
+.Shop .AllList {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.Shop .listCon {
+  width: 80%;
+}
+/* Detail */
+.Detail {
+  padding-top: 2rem;
+}
+.DetailCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.DetailCon .imgCon {
+  width: 40%;
+}
+.DetailCon .DetailText {
+  width: 58%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+}
+.DetailCon .DetailText h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 0 1.25rem;
+  width: 100%;
+}
+.DetailCon .DetailText p {
+  width: 100%;
+  color: goldenrod;
+  font-weight: 600;
+}
+.DetailCon .cartWrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+.DetailCon .countBtn {
+  min-width: 100px;
+  width: 15%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5rem 0;
+  background-color: #eaeaea;
+  margin-right: 2rem;
+}
+.DetailCon .countBtn .plus,
+.DetailCon .countBtn .minus {
+  cursor: pointer;
+}
+.DetailCon .cartBtn {
+  width: 50%;
+  border: 2px solid goldenrod;
+  color: goldenrod;
+  text-align: center;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.DetailCon .cartBtn:hover {
+  color: #fff;
+  background-color: goldenrod;
+}
+.Detail .listCon {
+  align-items: center;
+  width: 100%;
+}
+
+.Detail .slide .list {
+  width: 100%;
+  border: 2px solid darkgoldenrod;
+  margin-right: 0;
+  margin-bottom: 0m;
+}
+/* footer */
+.footer {
+  color: #5a5656;
+  padding-top: 2rem;
+  border-top: 0.5px solid #dddd;
+}
+.footer .top {
   display: flex;
   justify-content: space-between;
 }
-.detailCon .cardImg {
-  width: 45%;
+.footer .top nav {
+  width: 70%;
+  display: flex;
 }
-.detailCon .cardImg img {
-  width: 100%;
+.footer .top nav a {
+  padding: 0 2rem;
 }
-.detailCon .info {
-  width: calc(55% - var(--gap-s));
+.footer .top > div {
+  display: flex;
+  padding: 0 0 0.5rem;
+  border-bottom: 0.5px solid #ddd;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+.footer .top > div > * {
+  padding: 0 0.5rem;
+}
+.footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+}
+.footer .bottom .icon {
+  display: flex;
+}
+.footer .bottom .icon a {
+  padding: 0 0.5rem;
 }
 
-/* Cart 영역 */
+/* Cart section */
 .cart {
-  border: 1px solid #eee;
+  /* border:1px solid tomato */
 }
-.cart h1 {
-  padding: var(--gap-s) 0;
-}
-.cart h1 span {
-  font-weight: bold;
-}
-.cart .cartTable {
-  border: 1px solid red;
+.cartTable {
+  border: 1px solid blue;
   width: 100%;
-  /* border-collapse: collapse; */
 }
-table,
-tr,
-td,
-th {
-  border: 1px solid #333;
+.cartTable th,
+.cartTable td {
+  border: 1px solid #444;
+  padding: 0.5rem;
+  vertical-align: middle;
 }
-th {
+.cartTable th {
   background-color: #eee;
   text-align: center;
-  padding: 0.25rem 0;
-  width: 100px;
 }
-th:first-of-type {
-  width: calc(100% - 400px);
-}
-tr:nth-of-type(even) {
-  background-color: #eeeeee50;
-}
-tr:hover {
-  background-color: #eeeeee;
-}
-td {
-  /* table, td는 display 속성이 적용되지 않음 */
-  vertical-align: middle;
-  padding: 0.5rem;
-}
-.cart img {
-  width: 50px;
-}
-.cart .cartImg > div {
-  display: flex;
-  align-items: center;
-}
-
-.cartPrice,
-.cartTotal {
+.cartTable .right {
   text-align: right;
 }
-.cartCount,
-.cartBtn {
+.cartTable .center {
   text-align: center;
+}
+.cartTable img {
+  width: 50px;
+}
+
+/* 최근본 상품 영역 */
+
+.watch {
+  position: fixed;
+  width: 100px;
+  right: 2rem;
+  top: 150px;
+  z-index: 10;
+}
+
+.watch .list {
+  background-color: #ddd;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+.watch .list li {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.watch img {
+  width: 50px;
 }

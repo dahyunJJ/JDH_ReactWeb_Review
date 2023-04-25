@@ -1,14 +1,12 @@
-import MainEvent from "./MainEvent";
-import MainTopList from "./MainTopList";
+import MainBanner from "./MainBanner";
+import MainList from "./MainList";
 
 function Main() {
   return (
-    <>
-      <section className="mw">
-        <MainEvent />
-        <MainTopList />
-      </section>
-    </>
+    <section className="Main">
+      <MainBanner />
+      <MainList />
+    </section>
   );
 }
 

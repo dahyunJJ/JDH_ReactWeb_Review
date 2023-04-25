@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+:root {
+  --mw: 1400px;
+  --gap-s: 1rem;
+  --gap-b: 4rem;
+}
+
+.mw {
+  /* border: 1px solid red; */
+  max-width: var(--mw);
+  width: calc(100% - var(--gap-s));
+  margin: var(--gap-b) auto;
+}
+.hd {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+.hd.bar {
+  border-bottom: 1px solid #eee;
+}
+.hd h1 {
+  width: 150px;
+}
+.hd h1 img {
+  width: 100%;
+}
+.hd .gnb {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: var(--gap-s);
+  position: relative;
+}
+.hd .gnb::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 30%;
+  background-color: #888;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hd .gnb a {
+  padding: var(--gap-s);
+  transition: 0.3s;
+}
+.hd .gnb a:hover {
+  background-color: #eee;
+}
+.hd .gnb a.on {
+  background-color: tomato;
+}
+.hd .person {
+  color: #999;
+  padding-left: var(--gap-s);
+}
+.hd .person a {
+  display: inline-block;
+  padding: var(--gap-s);
+}
+.hd .person a:hover {
+  color: #000;
+}
+
+/* 메인 이벤트 배너 영역 */
+.mainEvent .eventList {
+  padding-top: 30%;
+  position: relative;
+  border-radius: var(--gap-s);
+  overflow: hidden;
+}
+.mainEvent .eventList > * {
+  position: absolute;
+}
+.mainEvent .eventList img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mainEvent .eventList .eventInfo {
+  top: 50%;
+  transform: translateY(-50%);
+  left: var(--gap-s);
+}
+.mainEvent .eventList .eventInfo p {
+  font-size: 3rem;
+  padding: var(--gap-s) 0;
+}
+.mainEvent .eventList .eventInfo button {
+  font-size: 1.5rem;
+  border: 1px solid burlywood;
+  color: burlywood;
+  outline: none;
+  background-color: transparent;
+  padding: 0.5rem var(--gap-s);
+  border-radius: 0.5rem;
+}
+
+/* MainTopList 메인 top 상품 리스트 */
+.MainTopList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.MainTopList h2 {
+  padding: var(--gap-s) 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.MainTopList .btnAll {
+  border: 1px solid burlywood;
+  color: burlywood;
+  outline: none;
+  background-color: transparent;
+  padding: 0 var(--gap-s);
+  border-radius: 0.25rem;
+}
+.MainTopList .btnAll:hover {
+  color: #fff;
+  background-color: burlywood;
+}
+.MainTopList .listCon {
+  width: 100%;
+  /* border: 1px solid #eee; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.MainTopList .listCon li {
+  width: calc(100% / 3 - var(--gap-s));
+  margin-right: calc(var(--gap-s) + var(--gap-s) / 2);
+  margin-bottom: var(--gap-s);
+  position: relative;
+  /* border: 1px solid blue; */
+}
+.MainTopList .listCon li:nth-of-type(3n) {
+  margin-right: 0;
+}
+/* Shop 영역 */
+.Shop {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Shop h2 {
+  width: 100%;
+  padding: var(--gap-s) 0;
+}
+.Shop .btnCon {
+  width: 200px;
+  padding-right: var(--gap-s);
+}
+.Shop .btnCon .btn {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: var(--gap-s);
+  cursor: pointer;
+}
+.Shop .listCon {
+  width: calc(100% - 200px);
+  display: flex;
+  flex-wrap: wrap;
+}
+.Shop .listCon li {
+  width: calc(100% / 4 - var(--gap-s));
+  margin-right: calc(var(--gap-s) + var(--gap-s) / 3);
+  margin-bottom: var(--gap-s);
+  position: relative;
+}
+.Shop .listCon li:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+/* 카드 컴포넌트 */
+.ProductCard .cardImg {
+  /* border: 1px solid red; */
+  overflow: hidden;
+  position: relative;
+  padding-top: 100%;
+  border-radius: var(--gap-s);
+}
+.ProductCard .cardImg * {
+  position: absolute;
+}
+.ProductCard .cardImg img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ProductCard .cardImg .addCart {
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.8);
+  bottom: -100%;
+  width: 100%;
+  padding: var(--gap-s);
+  text-align: center;
+  transition: 0.3s;
+}
+.ProductCard:hover .addCart {
+  bottom: 0;
+}
+.ProductCard .cardImg .discount {
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+  background-color: tomato;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.ProductCard .cardText {
+  margin-top: 1rem;
+}
+.ProductCard .cardText p {
+  padding: 0.5rem 0;
+  font-weight: bold;
+}
+.ProductCard .cardText p:last-of-type {
+  color: burlywood;
+}
+.ProductCard .btnAdd {
+  position: absolute;
+  color: transparent;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Detail 영역 */
+.detailCon {
+  display: flex;
+  justify-content: space-between;
+}
+.detailCon .cardImg {
+  width: 45%;
+}
+.detailCon .cardImg img {
+  width: 100%;
+}
+.detailCon .info {
+  width: calc(55% - var(--gap-s));
+}
+
+/* Cart 영역 */
+.cart {
+  border: 1px solid #eee;
+}
+.cart h1 {
+  padding: var(--gap-s) 0;
+}
+.cart h1 span {
+  font-weight: bold;
+}
+.cart .cartTable {
+  border: 1px solid red;
+  width: 100%;
+  /* border-collapse: collapse; */
+}
+table,
+tr,
+td,
+th {
+  border: 1px solid #333;
+}
+th {
+  background-color: #eee;
+  text-align: center;
+  padding: 0.25rem 0;
+  width: 100px;
+}
+th:first-of-type {
+  width: calc(100% - 400px);
+}
+tr:nth-of-type(even) {
+  background-color: #eeeeee50;
+}
+tr:hover {
+  background-color: #eeeeee;
+}
+td {
+  /* table, td는 display 속성이 적용되지 않음 */
+  vertical-align: middle;
+  padding: 0.5rem;
+}
+.cart img {
+  width: 50px;
+}
+.cart .cartImg > div {
+  display: flex;
+  align-items: center;
+}
+
+.cartPrice,
+.cartTotal {
+  text-align: right;
+}
+.cartCount,
+.cartBtn {
+  text-align: center;
+}
